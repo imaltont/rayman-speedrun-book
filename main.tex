@@ -1,0 +1,36 @@
+\documentclass{book}
+% import packages here
+\usepackage[acronym]{glossaries}
+
+% edit metadata and setup here
+\title{Rayman speedrunning book}
+\author{Araneae}
+\date{\today}
+
+\makeglossaries
+
+% this file is just for keeping everything nice and synced, setting up packages, as well as easy to change up the order of things. For actually editing things in the book, edit the files in the \input calls
+\begin{document}
+\pagenumbering{roman}
+% titlepage
+
+% abstract
+\section*{Abstract}
+
+% table of contents
+\tableofcontents
+\printglossary[type=\acronymtype,title=Acronyms]
+
+% start of actual book
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{levels/levels.tex}
+\input{animation/animation.tex}
+\input{powerups/powerups.tex}
+\input{movement/movement.tex}
+\input{camera/camera.tex}
+\input{hitboxes/hitboxes.tex}
+\input{objects/objects.tex}
+\input{audio/audio.tex}
+\input{history/history.tex} %unsure if I want this as it will get outdated quite often
+\end{document}
